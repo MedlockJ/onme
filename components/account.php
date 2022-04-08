@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include_once "utilities/cookies.php";
     include_once "data/avatar-measurements.php";
 
@@ -8,7 +9,7 @@
                 <div class="profile-info-container">
                     <img class="image profile-image" src="assets/images/profile.jpg">
                     <div class="layout-container tiny-gap">
-                        <h1 class="header secondary no-bold">Danny Acosta</h1>
+                        <h1 class="header secondary no-bold"><?=$VAR?></h1>
                         <p class="text understated text-size-extra-small">danny@onme.com</p>
                     </div>
                 </div>

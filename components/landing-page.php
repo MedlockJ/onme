@@ -8,7 +8,8 @@
                         <p class="text text-centered center-self">The Future of Ecommerce</p>
                     </div>
                 </div>
-                <a class="button" href="onboarding.php">Get Started</a>
+                <a class="button" href="onboarding.php">Sign Up</a>
+                <a class="button" href="login.php">Login</a>
             </div>
         </div>
 <?php }
