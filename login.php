@@ -25,7 +25,7 @@
                                 </form>
                             </div>
                         </div>
-                        <button class="button" type="submit" form="login-form">Login</button>
+                        <button class="button" type="submit" name="submit" form="login-form">Login</button>
                     </div>
                 </div>
             </div>

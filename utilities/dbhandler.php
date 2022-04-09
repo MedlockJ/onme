@@ -2,8 +2,8 @@
 session_start();
 
 $server = "students.cah.ucf.edu";
-$user = "";
-$pass = "";
+$user = "bo003448";
+$pass = "Students1!";
 $db = "bo003448";
 
 $connection = mysqli_connect($server, $user, $pass, $db);
