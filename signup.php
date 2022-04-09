@@ -10,14 +10,20 @@
     </head>
     <body>
         <div class="simulated-device">
-            <form>
-                <label for="email">Email</label>
-                <input type="text" id="password" name="password">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username">
-                <label for="password">Password</label>
-                <input type="text" id="password" name="password">
-            </form>
+            <div class="view-container" id="master">
+                <div class="view no-bottom-nav" view-id="root">
+                    <div class="layout-container center-contents">
+                        <form class="view-container">
+                            <label for="email">Email</label><br>
+                            <input type="text" id="email" name="email"><br>
+                            <label for="username">Username</label><br>
+                            <input type="text" id="username" name="username"><br>
+                            <label for="password">Password</label><br>
+                            <input type="text" id="password" name="password"><br>
+                        </form>
+                    </div> 
+                </div>
+            </div>
         </div>
     </body>
 </html>
