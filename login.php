@@ -10,7 +10,25 @@
     </head>
     <body>
         <div class="simulated-device">
-            
+            <div class="view-container" id="master">
+                <div class="safe-area-view" view-id="landing" view-title="" active="true">
+                    <div class="layout-container landing-page-view-container">
+                        <div class="layout-container">
+                            <div class="layout-container brand-assets-container">
+                                <img class="image brand-logo" src="assets/images/logo.png">
+                                <p class="text text-centered center-self">Login</p>
+                                <form class="center-self" id="login-form">
+                                    <label for="username">Username</label><br>
+                                    <input type="text" id="username" name="username"><br>
+                                    <label for="password">Password</label><br>
+                                    <input type="text" id="password" name="password"><br>
+                                </form>
+                            </div>
+                        </div>
+                        <input class="button" type="submit" form="login-form">
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
