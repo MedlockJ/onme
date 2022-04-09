@@ -17,17 +17,19 @@
                             <div class="layout-container brand-assets-container">
                                 <img class="image brand-logo" src="assets/images/logo.png">
                                 <p class="text text-centered center-self">Sign Up</p>
-                                <form class="center-self" id="signup-form">
+                                <form class="center-self" id="signup-form" action="signup-action.php" method="post">
                                     <label for="email">Email</label><br>
                                     <input type="text" id="email" name="email"><br>
                                     <label for="username">Username</label><br>
                                     <input type="text" id="username" name="username"><br>
                                     <label for="password">Password</label><br>
-                                    <input type="text" id="password" name="password"><br>
+                                    <input type="password" id="password" name="password"><br>
+                                    <label for="password-confirm">Confirm Password</label><br>
+                                    <input type="password" id="password-confirm" name="password-confirm"><br>
                                 </form>
                             </div>
                         </div>
-                        <input class="button" type="submit" form="signup-form">
+                        <button class="button" type="submit" form="signup-form">Sign Up</button>
                     </div>
                 </div>
             </div>
