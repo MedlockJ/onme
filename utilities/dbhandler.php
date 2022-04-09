@@ -1,8 +1,13 @@
 <?php
+session_start();
 
-$server = "";
+$server = "students.cah.ucf.edu";
 $user = "";
 $pass = "";
-$db = "";
+$db = "bo003448";
 
-$connection = "";
+$connection = mysqli_connect($server, $user, $pass, $db);
+
+if(!$connection){
+    die("connection failed: " . mysqli_connect_error());
+}
