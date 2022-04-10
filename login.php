@@ -17,7 +17,7 @@
                             <div class="layout-container brand-assets-container">
                                 <img class="image brand-logo" src="assets/images/logo.png">
                                 <p class="text text-centered center-self">Login</p>
-                                <form class="center-self" id="login-form" action="login-action.php" method="post">
+                                <form class="center-self" id="login-form" action="utilities/login-action.php" method="post">
                                     <label for="username">Username</label><br>
                                     <input type="text" id="username" name="username"><br>
                                     <label for="password">Password</label><br>

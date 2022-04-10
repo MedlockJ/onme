@@ -17,7 +17,9 @@
                             <div class="layout-container brand-assets-container">
                                 <img class="image brand-logo" src="assets/images/logo.png">
                                 <p class="text text-centered center-self">Sign Up</p>
-                                <form class="center-self" id="signup-form" action="signup-action.php" method="post">
+                                <form class="center-self" id="signup-form" action="utilities/signup-action.php" method="post">
+                                    <label for="name">Name</label><br>
+                                    <input type="text" id="name" name="name"><br>
                                     <label for="email">Email</label><br>
                                     <input type="text" id="email" name="email"><br>
                                     <label for="username">Username</label><br>
