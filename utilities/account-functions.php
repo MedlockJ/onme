@@ -44,14 +44,14 @@ function passwordIncorrect($password, $passwordconfirm){
     return $result;
 }
 
+// WHERE username = ? OR email = ?
+
 function userInUse($username, $email, $connection){
-    $sqlStatement = "SELECT * FROM accounts WHERE Uid = ? OR email = ?;";
+    $sqlStatement = "SELECT * FROM accounts WHERE username = ? OR email = ?;";
     $preparedStatment = mysqli_stmt_init($connection);
 
-    echo 
-
     if(!mysqli_stmt_prepare($preparedStatement, $sqlStatment)){
-        header("location: ../signup.php?error=statmentFaileduiu");
+        header("location: ../signup.php?error=UIUstatmentFailed");
         exit();
     }
 
@@ -71,11 +71,11 @@ function userInUse($username, $email, $connection){
 }
 
 function createUser($name, $email, $username, $password, $connection){
-    $sqlStatement = "INSERT INTO accounts (username, email, Uid, password) VALUES (?, ?, ?, ?);";
+    $sqlStatement = "INSERT INTO accounts (name, email, username, pass) VALUES (?, ?, ?, ?);";
     $preparedStatment = mysqli_stmt_init($connection);
 
     if(!mysqli_stmt_prepare($sqlStatement, $preparedStatment)){
-        header("location: ../signup.php?error=statmentFailedcreate");
+        header("location: ../signup.php?error=CREATEUSERstatmentFailed-");
         exit();
     }
 

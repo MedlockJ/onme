@@ -1,7 +1,6 @@
 <?php
-session_start();
 
-$server = "students.cah.ucf.edu";
+$server = "localhost";
 $user = "bo003448";
 $pass = "Students1!";
 $db = "bo003448";
