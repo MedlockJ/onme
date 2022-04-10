@@ -30,7 +30,7 @@ if(isset($_POST["submit"])){
         exit();
     }
 
-    if(userInUse($username, $email, $connection) !== false){
+    if(userInUse($connection, $username, $email) !== false){
         header("location: ../signup.php?error=userInUse");
         exit();
     }

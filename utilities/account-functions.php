@@ -44,10 +44,10 @@ function passwordIncorrect($password, $passwordconfirm){
     return $result;
 }
 
-// WHERE username = ? OR email = ?
+// WHERE usersUid = ? OR usersEmail = ?
 
-function userInUse($username, $email, $connection){
-    $sqlStatement = "SELECT * FROM accounts WHERE username = ? OR email = ?;";
+function userInUse($connection, $username, $email){
+    $sqlStatement = "SELECT * FROM users;";
     $preparedStatment = mysqli_stmt_init($connection);
 
     if(!mysqli_stmt_prepare($preparedStatement, $sqlStatment)){
@@ -71,7 +71,7 @@ function userInUse($username, $email, $connection){
 }
 
 function createUser($name, $email, $username, $password, $connection){
-    $sqlStatement = "INSERT INTO accounts (name, email, username, pass) VALUES (?, ?, ?, ?);";
+    $sqlStatement = "INSERT INTO users (usersName, usersEmail, usersUid, usersPwd) VALUES (?, ?, ?, ?);";
     $preparedStatment = mysqli_stmt_init($connection);
 
     if(!mysqli_stmt_prepare($sqlStatement, $preparedStatment)){
