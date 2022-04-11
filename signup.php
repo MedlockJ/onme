@@ -46,9 +46,9 @@
                                 }else if($_GET["error"] == "UIUstatmentFailed"){
                                     echo "<h4>Unknown Error = UIU. Please contact Customer Support!<h4>";
                                 }else if($_GET["error"] == "CREATEUSERstatmentFailed"){
-                                    echo "<h4>Unknown Error = UIU. Please contact Customer Support!<h4>";
+                                    echo "<h4>Unknown Error = CU. Please contact Customer Support!<h4>";
                                 }else if($_GET["error"] == "false"){
-                                    header("location: ../signup.php");
+                                    header("location: landing.php");
                                 }
                             }
                         ?>

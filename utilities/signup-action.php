@@ -35,7 +35,7 @@ if(isset($_POST["submit"])){
         exit();
     }
 
-    createUser($name, $email, $username, $password, $passwordconfirm, $connection);
+    createUser($name, $email, $username, $password, $connection);
 }else{
     header("location: ../signup.php");
     exit();

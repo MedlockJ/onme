@@ -7,12 +7,12 @@ if(isset($_POST["submit"])){
     require_once 'dbhandler.php';
     require_once 'account-functions.php';
 
-    if(emptyInputLogin($username, $password) !== false){
+    if(emptyInputLogin($username, $pwd)){
         header("location: ../login.php?error=emptyinput");
         exit();
     }
 
-    loginUser($connection, $username, $password);
+    loginUser($connection, $username, $pwd);
 }else{
     header("location: ../login.php");
     exit();

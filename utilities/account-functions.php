@@ -75,7 +75,7 @@ function createUser($name, $email, $username, $password, $connection){
     $preparedStatement = mysqli_stmt_init($connection);
 
     if(!mysqli_stmt_prepare($preparedStatement, $sqlStatement)){
-        header("location: ../signup.php?error=CREATEUSERstatmentFailed-");
+        header("location: ../signup.php?error=CREATEUSERstatmentFailed");
         exit();
     }
 
@@ -103,14 +103,14 @@ function emptyInputLogin($username, $password){
 function loginUser($connection, $username, $password){
     $usernameExists = userInUse($connection, $username, $username);
     if($usernameExists === false){
-        header("location: ../login.php?error=wronglogin");
+        header("location: ../login.php?error=wrongUSERlogin");
         exit();
     }
     $passwordHashed = $usernameExists["usersPwd"];
     $checkPassword = password_verify($password, $passwordHashed);
 
     if($checkPassword === false){
-        header("location: ../login.php?error=wronglogin");
+        header("location: ../login.php?error=wrongPASSlogin");
         exit();
     }else if($checkPassword === true){
         session_start();
