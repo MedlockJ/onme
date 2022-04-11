@@ -25,6 +25,15 @@
                                 </form>
                             </div>
                         </div>
+                        <?php
+                            if(isset($_GET["error"])){
+                                if($_GET["error"] == "emptyinput"){
+                                    echo "<h4>Please fill all fields!<h4>";
+                                }else if($_GET["error"] == "wronglogin"){
+                                    echo "<h4>Incorrect Username OR Password<h4>";
+                                }
+                            }
+                        ?>
                         <button class="button" type="submit" name="submit" form="login-form">Login</button>
                     </div>
                 </div>

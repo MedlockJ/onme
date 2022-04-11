@@ -1,4 +1,6 @@
-<?php   
+<?php
+    session_start();
+    
     include_once "utilities/cookies.php";
 
     function renderAvatar($params = []) { ?>

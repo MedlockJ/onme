@@ -88,3 +88,36 @@ function createUser($name, $email, $username, $password, $connection){
     header("location: ../signup.php?error=false");
     exit();
 }
+
+function emptyInputLogin($username, $password){
+    $result;
+    if(empty($username) || empty($password)){
+        $result = true;
+    }else{
+        $result = false;
+    }
+    
+    return $result;
+}
+
+function loginUser($connection, $username, $password){
+    $usernameExists = userInUse($connection, $username, $username);
+    if($usernameExists === false){
+        header("location: ../login.php?error=wronglogin");
+        exit();
+    }
+    $passwordHashed = $usernameExists["usersPwd"];
+    $checkPassword = password_verify($password, $passwordHashed);
+
+    if($checkPassword === false){
+        header("location: ../login.php?error=wronglogin");
+        exit();
+    }else if($checkPassword === true){
+        session_start();
+        $_SESSION["usersid"] = $usernameExists["usersId"];
+        $_SESSION["usersName"] = $usernameExists["usersName"];
+        $_SESSION["usersEmail"] = $usernameExists["usersEmail"];
+        header("location: ../onboarding.php");
+        exit();
+    }
+}

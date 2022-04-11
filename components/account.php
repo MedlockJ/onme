@@ -10,7 +10,9 @@
                     <img class="image profile-image" src="assets/images/profile.jpg">
                     <div class="layout-container tiny-gap">
                         <h1 class="header secondary no-bold"><?=$VAR?></h1>
-                        <p class="text understated text-size-extra-small">danny@onme.com</p>
+                        <p class="text understated text-size-extra-small">
+                            <?php echo $_SESSION["usersEmail"]; ?>
+                        </p>
                     </div>
                 </div>
                 <div class="avatar-measurement-display-container">
