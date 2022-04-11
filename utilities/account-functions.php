@@ -43,22 +43,22 @@ function passwordIncorrect($password, $passwordconfirm){
 
     return $result;
 }
-//  
+
 function userInUse($connection, $username, $email){
     $sqlStatement = "SELECT * FROM users WHERE usersUid = ? OR usersEmail = ?;";
-    $preparedStatment = mysqli_stmt_init($connection);
+    $preparedStatement = mysqli_stmt_init($connection);
 
-    if(!mysqli_stmt_prepare($preparedStatement, $sqlStatment)){
+    if(!mysqli_stmt_prepare($preparedStatement, $sqlStatement)){
         header("location: ../signup.php?error=UIUstatmentFailed");
         exit();
     }
 
-    mysqli_stmt_bind_param($preparedStatment, "ss", $username, $email);
-    mysqli_stmt_execute($preparedStatment);
+    mysqli_stmt_bind_param($preparedStatement, "ss", $username, $email);
+    mysqli_stmt_execute($preparedStatement);
 
     printf("Error: %s.\n", mysqli_stmt_error($stmt));
 
-    $resultData = mysqli_stmt_get_result($preparedStatment);
+    $resultData = mysqli_stmt_get_result($preparedStatement);
 
     if($row = mysqli_fetch_assoc($resultData)){
         return $row;
@@ -67,23 +67,23 @@ function userInUse($connection, $username, $email){
         return $result;
     }
 
-    mysqli_stmt_close($preparedStatment);
+    mysqli_stmt_close($preparedStatement);
 }
 
 function createUser($name, $email, $username, $password, $connection){
     $sqlStatement = "INSERT INTO users (usersName, usersEmail, usersUid, usersPwd) VALUES (?, ?, ?, ?);";
-    $preparedStatment = mysqli_stmt_init($connection);
+    $preparedStatement = mysqli_stmt_init($connection);
 
-    if(!mysqli_stmt_prepare($sqlStatement, $preparedStatment)){
+    if(!mysqli_stmt_prepare($preparedStatement, $sqlStatement)){
         header("location: ../signup.php?error=CREATEUSERstatmentFailed-");
         exit();
     }
 
     $hashPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($preparedStatment, "ssss", $name, $email, $username, $hashPassword);
-    mysqli_stmt_execute($preparedStatment);
-    mysqli_stmt_close($preparedStatment);
+    mysqli_stmt_bind_param($preparedStatement, "ssss", $name, $email, $username, $hashPassword);
+    mysqli_stmt_execute($preparedStatement);
+    mysqli_stmt_close($preparedStatement);
 
     header("location: ../signup.php?error=false");
     exit();

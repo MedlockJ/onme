@@ -53,6 +53,7 @@
                             }
                         ?>
                         <button class="button" type="submit" name="submit" form="signup-form">Sign Up</button>
+                        <a class="button" href="landing.php">Home</a>
                     </div>
                 </div>
             </div>
