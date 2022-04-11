@@ -43,11 +43,9 @@ function passwordIncorrect($password, $passwordconfirm){
 
     return $result;
 }
-
-// WHERE usersUid = ? OR usersEmail = ?
-
+//  
 function userInUse($connection, $username, $email){
-    $sqlStatement = "SELECT * FROM users;";
+    $sqlStatement = "SELECT * FROM users WHERE usersUid = ? OR usersEmail = ?;";
     $preparedStatment = mysqli_stmt_init($connection);
 
     if(!mysqli_stmt_prepare($preparedStatement, $sqlStatment)){
@@ -57,6 +55,8 @@ function userInUse($connection, $username, $email){
 
     mysqli_stmt_bind_param($preparedStatment, "ss", $username, $email);
     mysqli_stmt_execute($preparedStatment);
+
+    printf("Error: %s.\n", mysqli_stmt_error($stmt));
 
     $resultData = mysqli_stmt_get_result($preparedStatment);
 
