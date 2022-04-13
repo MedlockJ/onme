@@ -43,7 +43,7 @@
                                         echo "clothing-".$key."=".'"'.$value.'"';
                                     } ?>
                             >
-                                <img class="fittingroom-drawer-clothing-article-image" src="assets/images/clothing/<?= $demoClothing[$i]["gender"]; ?>/<?= $demoClothing[$i]["id"]; ?>.png">
+                                <img class="fittingroom-drawer-clothing-article-image" src="assets/images/clothing/<?= $demoClothing[$i]["gender"]; ?>/<?= $demoClothing[$i]["id"]; ?>.png" alt="Fitting Room Clothes">
                             </div>
                     <?php } ?>
                 </div>

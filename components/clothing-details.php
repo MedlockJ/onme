@@ -4,7 +4,7 @@
             <div class="safe-area-view">
                 <div class="layout-container">
                     <div class="clothing-article-image-container">
-                        <img class="image clothing-article-image">
+                        <img class="image clothing-article-image" alt="clothing">
                     </div>
                     <div class="layout-container no-gap">
                         <p class="text clothing-article-brand extra-margin-vertical">Brand</p>

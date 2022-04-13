@@ -7,7 +7,7 @@
         <div class="safe-area-view" view-id="account" view-title="Onme ID" active="true">
             <div class="layout-container large-gap">
                 <div class="profile-info-container">
-                    <img class="image profile-image" src="assets/images/profile.jpg">
+                    <img class="image profile-image" src="assets/images/profile.jpg" alt="Profile Picture">
                     <div class="layout-container tiny-gap">
                         <h1 class="header secondary no-bold"><?=$VAR?></h1>
                         <p class="text understated text-size-extra-small">

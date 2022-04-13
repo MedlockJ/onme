@@ -66,7 +66,7 @@
                                             <?php } ?>
                                         >
                                             <div class="clothing-article-image-container">
-                                                <img class="image clothing-article-image" src="assets/images/clothing/<?= $favoritedClothingData[$i] -> articles[$j] -> imagePath; ?>">
+                                                <img class="image clothing-article-image" src="assets/images/clothing/<?= $favoritedClothingData[$i] -> articles[$j] -> imagePath; ?>"alt="Favorite Clothing">
                                             </div>
                                             <div class="clothing-article-information-container">
                                                 <p class="text clothing-article-brand"><?= $favoritedClothingData[$i] -> articles[$j] -> brand; ?></p>

@@ -38,7 +38,7 @@
                                         <?php } ?>
                                     >
                                         <div class="clothing-article-image-container">
-                                            <img class="image clothing-article-image" src="assets/images/clothing/<?= $structuredClothingData[$i] -> articles[$j] -> imagePath; ?>">
+                                            <img class="image clothing-article-image" src="assets/images/clothing/<?= $structuredClothingData[$i] -> articles[$j] -> imagePath; ?>"alt="image of clothing">
                                         </div>
                                         <div class="clothing-article-information-container">
                                             <p class="text clothing-article-brand"><?= $structuredClothingData[$i] -> articles[$j] -> brand; ?></p>
