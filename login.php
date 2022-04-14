@@ -15,13 +15,13 @@
                     <div class="layout-container landing-page-view-container">
                         <div class="layout-container">
                             <div class="layout-container brand-assets-container">
-                                <img class="image brand-logo" src="assets/images/logo.png" alt="Onme Logo">
+                                <img class="image brand-logo" src="assets/images/logo.png">
                                 <p class="text text-centered center-self">Login</p>
                                 <form class="center-self" id="login-form" action="utilities/login-action.php" method="post">
                                     <label for="username">Username</label><br>
-                                    <input type="text" id="username" name="username"><br>
+                                    <input type="text" id="username" name="username" placeholder="username@email.com"><br><br><!--username box with placholder-->
                                     <label for="password">Password</label><br>
-                                    <input type="text" id="password" name="password"><br>
+                                    <input type="text" id="password" name="password" placeholder="pswrd1234"><br><!--password box with placeholder-->
                                 </form>
                             </div>
                         </div>
