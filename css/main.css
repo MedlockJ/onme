@@ -142,6 +142,26 @@ body {
   max-width: 20rem;
 }
 
+/*Username box sample text*/
+#username {
+  border-radius: 25px;
+}
+
+/*Password box sample text*/
+#password {
+border-radius: 25px;
+}
+
+/*name box sample text*/
+#name {
+  border-radius: 25px;
+}
+
+/*email box sample text*/
+#email {
+  border-radius: 25px;
+  }
+
 .text {
   margin: 0;
 }

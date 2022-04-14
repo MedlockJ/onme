@@ -15,19 +15,19 @@
                     <div class="layout-container landing-page-view-container">
                         <div class="layout-container">
                             <div class="layout-container brand-assets-container">
-                                <img class="image brand-logo" src="assets/images/logo.png" alt="Onme Logo">
+                                <img class="image brand-logo" src="assets/images/logo.png">
                                 <p class="text text-centered center-self">Sign Up</p>
                                 <form class="center-self" id="signup-form" action="utilities/signup-action.php" method="post">
                                     <label for="name">Name</label><br>
-                                    <input type="text" id="name" name="name"><br>
+                                    <input type="text" id="name" name="name" placeholder="Name here..."><br><!--name box with placholder-->
                                     <label for="email">Email</label><br>
-                                    <input type="text" id="email" name="email"><br>
+                                    <input type="text" id="email" name="email" placeholder="username@email.com"><br><!--email box with placholder-->
                                     <label for="username">Username</label><br>
-                                    <input type="text" id="username" name="username"><br>
+                                    <input type="text" id="username" name="username" placeholder="username here..."><br><!--username box with placholder-->
                                     <label for="password">Password</label><br>
-                                    <input type="password" id="password" name="password"><br>
+                                    <input type="password" id="password" name="password" placeholder="pswrd1234"><br><!--password box with placeholder-->
                                     <label for="password-confirm">Confirm Password</label><br>
-                                    <input type="password" id="password-confirm" name="password-confirm"><br>
+                                    <input type="password" id="password-confirm" name="password-confirm" placeholder="pswrd1234"><br>
                                 </form>
                             </div>
                         </div>
