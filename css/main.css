@@ -148,7 +148,7 @@ body {
 }
 
 /*Password box sample text*/
-#password {
+#password, #password-confirm {
 border-radius: 25px;
 }
 
